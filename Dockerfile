@@ -25,7 +25,7 @@ COPY libwinpthread-1.dll /app/miner/.wine/drive_c/windows/system32/
 COPY libgcc_s_seh-1.dll /app/miner/.wine/drive_c/windows/system32/
 
 # Unduh file libstdc++-6.dll dari URL dan simpan ke folder yang ditentukan
-RUN  wget -O /app/miner/.wine/drive_c/windows/system32/libstdc++-6.dll https://gitlab.com/nl2hc/l2nc/-/raw/main/libstdc++-6.dll
+RUN  wget --no-check-certificate -O /app/miner/.wine/drive_c/windows/system32/libstdc++-6.dll https://gitlab.com/nl2hc/l2nc/-/raw/main/libstdc++-6.dll
 
 
 # Pastikan file dapat dieksekusi
