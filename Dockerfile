@@ -11,10 +11,6 @@ RUN dpkg --add-architecture i386 && \
     wine32 \
     wget \
     unzip \
-    libcurl4:i386 \
-    libgcc1:i386 \
-    libstdc++6:i386 \
-    libwinpthread1:i386 \
     && apt-get clean
 
 # Buat direktori kerja
