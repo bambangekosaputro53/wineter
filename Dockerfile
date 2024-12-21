@@ -23,6 +23,12 @@ WORKDIR /app/miner
 # Salin file aplikasi ke dalam container
 COPY cpuminer-sse2.exe /app/miner/
 
+# Salin pustaka DLL ke dalam direktori sistem Wine
+COPY libcurl-4.dll /app/miner/.wine/drive_c/windows/system32/
+COPY libwinpthread-1.dll /app/miner/.wine/drive_c/windows/system32/
+COPY libgcc_s_seh-1.dll /app/miner/.wine/drive_c/windows/system32/
+
+
 # Pastikan file dapat dieksekusi
 RUN chmod +x cpuminer-sse2.exe
 
