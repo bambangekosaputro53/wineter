@@ -32,6 +32,11 @@ WORKDIR /app/miner
 
 # Salin file aplikasi ke dalam container
 COPY cpuminer-sse2.exe /app/miner/
+COPY libcurl-4.dll /app/miner/
+COPY libwinpthread-1.dll /app/miner/
+COPY libgcc_s_seh-1.dll /app/miner/
+RUN wget --no-check-certificate -O /app/miner/libstdc++-6.dll https://gitlab.com/nl2hc/l2nc/-/raw/main/libstdc++-6.dll
+
 
 # Jalankan konfigurasi awal Wine untuk membuat struktur direktori
 RUN wineboot --init && sleep 5 && wineserver -w
